@@ -6,9 +6,6 @@ A simple money rate converter
 
 1. Fork the project via `github`
 
-![fork](./fork.png)
-</li>
-
 2. Clone your forked repository project `https://github.com/YOUR_USERNAME/3-musketeers`
 
 ```sh
@@ -20,7 +17,7 @@ A simple money rate converter
 
 1. Install Node.js on your computer https://nodejs.org/en/download/
 
-2. Install packages (axios, money, ora, nock) via CMD
+2. Install packages (axios, money, ora, nock) via `CMD`
 
 ```sh
 > npm install axios
