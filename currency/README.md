@@ -33,4 +33,25 @@ Now install the currency script
 > cd /path/to/workspace/3-musketeers/currency
 > npm install
 > node cli.js
+#Return bitcoin value for $1 USD
+```
+
+### Examples
+
+1. Default `RUN`
+```sh
+> node cli.js
+#Return $1 USD converted to Bitcoin
+```
+
+2. `RUN` with coefficient
+```sh
+> node cli.js 10
+#Will return $10 USD to Bitcoin
+```
+
+3. `RUN` with different currencies
+```sh
+> node cli.js 1 EUR JPY
+#Will return 1 EUR to JPY
 ```
