@@ -55,3 +55,8 @@ Now install the currency script
 > node cli.js 1 EUR JPY
 #Will return 1 EUR to JPY
 ```
+
+### Help command
+```sh
+> node cli.js --help
+```
