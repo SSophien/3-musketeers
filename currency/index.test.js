@@ -1,4 +1,5 @@
 const nock = require('nock');
+const currency = require('./');
 
 beforeEach(() => {
   nock('https://api.exchangeratesapi.io')
@@ -15,7 +16,7 @@ beforeEach(() => {
     .reply(200, {
       'base': 'EUR',
       'rates': {
-        'USD': 1.1122
+          'USD': 1.1122
       }
     });
 
@@ -40,37 +41,72 @@ beforeEach(() => {
 });
 
 test('convert 1 USD to EUR', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 1;
+  const from = 'USD';
+  const to = 'EUR';
+  const opts = {amount, from, to}
+  const result = await currency(opts);
+  console.log(`${amount} ${from} = ${result} ${to}`);
 });
 
 test('convert 1 USD to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 1;
+  const from = 'USD';
+  const to = 'USD';
+  const opts = {amount, from, to}
+  const result = await currency(opts);
+  console.log(`${amount} ${from} = ${result} ${to}`);
 });
 
 test('convert 1 EUR to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 1;
+  const from = 'EUR';
+  const to = 'USD';
+  const opts = {amount, from, to}
+  const result = await currency(opts);
+  console.log(`${amount} ${from} = ${result} ${to}`);
 });
 
 test('convert 1 BTC to USD', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 1;
+  const from = 'BTC';
+  const to = 'USD';
+  const opts = {amount, from, to}
+  const result = await currency(opts);
+  console.log(`${amount} ${from} = ${result} ${to}`);
 });
 
 test('convert 1 BTC to EUR', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 1;
+  const from = 'BTC';
+  const to = 'EUR';
+  const opts = {amount, from, to}
+  const result = await currency(opts);
+  console.log(`${amount} ${from} = ${result} ${to}`);
 });
 
 test('convert without arguments', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const result = await currency({})
+  console.log(`1 USD = ${result} BTC`);
 });
 
 test('convert with amount only', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 150;
+  const result = await currency({amount})
+  console.log(`1 USD = ${result} BTC`);
 });
 
 test('convert with amount and (from) currency only', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 100;
+  const from = 'JPY';
+  const result = await currency(100, 'JPY')
+  console.log(`1 ${from} = ${result} BTC`);
 });
 
 test('convert without a correct `from` or `to` currency value', async () => {
-  throw new Error('test not yet defined... remove the throw and write your test here');
+  const amount = 1;
+  const from = 'JPY';
+  const to = 'lol';
+  const result = await currency({amount, from, to});
+  console.log(`${amount} ${from} = ${result} ${to}`);
 });
