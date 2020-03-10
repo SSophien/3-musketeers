@@ -60,3 +60,38 @@ Now install the currency script
 ```sh
 > node cli.js --help
 ```
+
+### Available currencies (ISO 4217)
+|BTC|Bitcoin|
+|CAD|Canadian dollar|
+|HKD|Honk Kong dollar|
+|ISK|Icelandic króna|
+|PHP|Philippine peso|
+|DKK|Danish krone|
+|HUF|Hungarian forint|
+|CZK|Czechoslovak koruna|
+|AUD|Australian dollar|
+|RON|Romanian leu|
+|SEK|Swedish krona/kronor|
+|IDR|Indonesian rupiah|
+|INR|Indian rupee|
+|BRL|Brazilian cruzeiro real|
+|RUB|Russian ruble|
+|HRK|Croatian dinar|
+|JPY|Japanese yen|
+|THB|Thai baht|
+|CHF|Swiss franc|
+|SGD|Singapore dollar|
+|PLN|Polish zloty|
+|BGN|Bulgarian lev|
+|TRY|Turkish lira|
+|CNY|Renminbi (Chinese) yuan|
+|NOK|Norwegian krone|
+|NZD|New Zealand dollar|
+|ZAR|South African rand|
+|USD|United States dollar|
+|MXN|Mexican peso|
+|ILS|Israeli new shekel|
+|GBP|Pound sterling|
+|KRW|South Korean won|
+|MYR|Malaysian ringgit|
