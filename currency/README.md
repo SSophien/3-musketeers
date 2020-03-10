@@ -62,6 +62,7 @@ Now install the currency script
 ```
 
 ### Available currencies (ISO 4217)
+|ISO Name|Currency|
 |---|---|
 |BTC|Bitcoin|
 |CAD|Canadian dollar|
