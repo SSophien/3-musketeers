@@ -7,13 +7,17 @@ const CURRENCY_BITCOIN = 'BTC';
 
 const isAnyBTC = (from, to) => [from, to].includes(CURRENCY_BITCOIN);
 
+/**
+ * [exports description]
+ * @param  {[type]}  opts [Will take opts as a variable (amount, from, to)]
+ * @return {Promise}      [Return the calculated result]
+ */
 module.exports = async opts => {
   const {amount = 1, from = 'USD', to = CURRENCY_BITCOIN} = opts;
   const promises = [];
   let base = from;
 
   const anyBTC = isAnyBTC(from, to);
-
   if (anyBTC) {
     base = from === CURRENCY_BITCOIN ? to : from;
     promises.push(axios(BLOCKCHAIN_URL));

@@ -93,14 +93,14 @@ test('convert without arguments', async () => {
 test('convert with amount only', async () => {
   const amount = 150;
   const result = await currency({amount})
-  console.log(`1 USD = ${result} BTC`);
+  console.log(`${amount} USD = ${result} BTC`);
 });
 
 test('convert with amount and (from) currency only', async () => {
   const amount = 100;
-  const from = 'JPY';
-  const result = await currency(100, 'JPY')
-  console.log(`1 ${from} = ${result} BTC`);
+  const from = 'EUR';
+  const result = await currency({amount, from});
+  console.log(`${amount} ${from} = ${result} BTC`);
 });
 
 test('convert without a correct `from` or `to` currency value', async () => {
